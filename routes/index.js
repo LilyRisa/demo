@@ -17,14 +17,13 @@ module.exports = function(app) {
     next();
   });
 
-  app.post(
-    "/api/auth/signup",
-    [
-      verifySignUp.checkDuplicateUsernameOrEmail,
-      verifySignUp.checkRolesExisted
-    ],
-    register
-  );
+  // app.post(
+  //   "/api/auth/signup",[verifySignUp.checkDuplicateUsernameOrEmail,verifySignUp.checkRolesExisted],register
+  // );
+
+  app.get('/demo',[abc,xyz],function(request, response){
+
+  })
 
   app.post("/api/auth/signin", login);
 
